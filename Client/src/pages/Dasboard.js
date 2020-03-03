@@ -1,10 +1,24 @@
 import React from 'react';
 import './Dashboard.css';
+import {
+    Col,
+    Row
+} from 'antd'
+// import Infocell from './../components/Infocell';
 
 function Dashboard () {
     return (
         <div>
-            <p>I am ze dashbord</p>
+
+            <Row>
+                <Col></Col>
+                <Col></Col>
+            </Row>
+
+            <Row>
+                
+            </Row>
+
         </div>
     );
 };
