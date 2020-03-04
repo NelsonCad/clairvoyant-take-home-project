@@ -318,7 +318,8 @@
                         "value": "3"
                     }
                 ]
-            }
+            },
+            "type": "doughnut2d"
         },
         {
             "SensitiveInfoCate": {
@@ -373,7 +374,204 @@
                         "value": "3"
                     }
                 ]
-            }
+            },
+            "type": "doughnut2d"
+        },
+        {
+            "inspectionCoverage": {
+                "chart": {
+                    "caption": "Inspection Coverage",
+                    "subcaption": "by Data Sources",
+                    "yaxisname": "(inspection coverage (%)",
+                    "aligncaptionwithcanvas": "0",
+                    "plottooltext": "<b>$dataValue</b>% of <b>$label</b> inspected",
+                    "theme": "fusion"
+                },
+                "data": [
+                    {
+                        "label": "DS1",
+                        "value": "75"
+                    },
+                    {
+                        "label": "DS2",
+                        "value": "43"
+                    },
+                    {
+                        "label": "DS3",
+                        "value": "94"
+                    },
+                    {
+                        "label": "DS4",
+                        "value": "38"
+                    }
+                ]
+            },
+            "type": "bar2d"
+        },
+        {
+            "SensitiveInfoCountType": {
+                "chart": {
+                    "caption": "Count of Sensitive Info Type",
+                    "subcaption": "by Data Sources",
+                    "yaxisname": "(Count of unique Sensitive Info Types)",
+                    "aligncaptionwithcanvas": "0",
+                    "plottooltext": "<b>$dataValue</b> unique data typse within <b>$label</b>",
+                    "theme": "fusion"
+                },
+                "data": [
+                    {
+                        "label": "DS1",
+                        "value": "22"
+                    },
+                    {
+                        "label": "DS2",
+                        "value": "14"
+                    },
+                    {
+                        "label": "DS3",
+                        "value": "28"
+                    },
+                    {
+                        "label": "DS4",
+                        "value": "12"
+                    }
+                ]
+            },
+            "type": "bar2d"
+        },
+        {
+            "SensitiveInfoCountCate": {
+                "chart": {
+                    "caption": "Count of Sensitive Info Category",
+                    "subcaption": "by Data Sources",
+                    "yaxisname": "(Count of unique Sensitive InfoType Categories)",
+                    "aligncaptionwithcanvas": "0",
+                    "plottooltext": "<b>$dataValue</b> unique data typse within <b>$label</b>",
+                    "theme": "fusion"
+                },
+                "data": [
+                    {
+                        "label": "DS1",
+                        "value": "22"
+                    },
+                    {
+                        "label": "DS2",
+                        "value": "14"
+                    },
+                    {
+                        "label": "DS3",
+                        "value": "28"
+                    },
+                    {
+                        "label": "DS4",
+                        "value": "12"
+                    },
+                    {
+                        "label": "DS5",
+                        "value": "16"
+                    },
+                    {
+                        "label": "DS6",
+                        "value": "9"
+                    },
+                    {
+                        "label": "DS7",
+                        "value": "8"
+                    },
+                    {
+                        "label": "DSLite",
+                        "value": "2"
+                    },
+                    {
+                        "label": "DS1/2",
+                        "value": "7"
+                    }
+                ]
+            },
+            "type": "scrollbar2d"
+        },
+        {
+            "SensitiveDataRecordCount": {
+                "chart": {
+                    "caption": "Sensitive Data Record Count",
+                    "subcaption": "(By DaTa SoUrCeS)",
+                    "placevaluesinside": "1",
+                    "showvalues": "0",
+                    "theme": "fusion"
+                },
+                "categories": [
+                    {
+                        "category": [
+                            {
+                                "label": "DS1"
+                            },
+                            {
+                                "label": "DS2"
+                            },
+                            {
+                                "label": "DS3"
+                            },
+                            {
+                                "label": "DS4"
+                            }
+                        ]
+                    }
+                ],
+                "dataset": [
+                    {
+                        "seriesname": "Class 1",
+                        "data": [
+                            {
+                                "value": "5000"
+                            },
+                            {
+                                "value": "5000"
+                            },
+                            {
+                                "value": "6000"
+                            },
+                            {
+                                "value": "10000"
+                            }
+                        ]
+                    },
+                    {
+                        "seriesname": "Class 2",
+                        "data": [
+                            {
+                                "value": "20000"
+                            },
+                            {
+                                "value": "20000"
+                            },
+                            {
+                                "value": "20000"
+                            },
+                            {
+                                "value": "20000"
+                            }
+                        ]
+                    },
+                    {
+                        "seriesname": "Class 3",
+                        "data": [
+                            {
+                                "value": "30000"
+                            },
+                            {
+                                "value": "30000"
+                            },
+                            {
+                                "value": "29000"
+                            },
+                            {
+                                "value": "20000"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "type": "stackedbar2d"
         }
     ]
 }

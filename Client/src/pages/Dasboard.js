@@ -9,6 +9,9 @@ import {
 function Dashboard () {
     return (
         <div>
+            <Row>
+            {/* stackedcolumn2d */}
+            </Row>
 
             <Row>
                 <Col></Col>
@@ -16,7 +19,7 @@ function Dashboard () {
             </Row>
 
             <Row>
-                
+
             </Row>
 
         </div>

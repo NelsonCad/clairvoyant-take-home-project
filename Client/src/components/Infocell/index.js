@@ -13,6 +13,9 @@ function Infocell() {
             <Card title={props.title} extra={<a href="#">More</a>} style={{ width: 300 }}>
                 <ReactFC
                     type={props.type}
+                    //scrollbar2d
+                    //bar2d
+                    //doughnut2d
                     width={props.width}
                     height={props.height}
                     dataFormat="JSON"
