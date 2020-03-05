@@ -1,21 +1,29 @@
 module.exports = {
     overview: {
-        resolvedIssues: 5,
+        issuesResolved: {
+            title: "security Issues Resolved",
+            amount: 5,
+        },
         inspectionCoverage: {
+            title: "Inspection Coverage",
             databases: {
+                title: "Databases",
                 current: 20,
                 total: 50
             },
             tables: {
+                title: "Tables",
                 current: 20,
                 total: 50
             },
             files: {
+                title: "Files",
                 current: 130,
                 total: 8000
             }
         },
         sensitiveDataLocations: {
+            title: "Sensitive Data Location",
             dataSources: 3,
             databases: 5,
             tables: 8,
@@ -23,246 +31,84 @@ module.exports = {
         }
     },
     dataDistChart: {
-        chart: {
-            caption: "Sensitive Data Distribution by Data Source",
-            showsum: "10",
-            plottooltext: "<b>$dataValue</b> records distributed via $seriesName in $label",
-            theme: "fusion",
-            drawcrossline: "5"
-        },
-        categories: [
-            {
-                category: [
-                    {
-                        label: "DS1"
-                    },
-                    {
-                        label: "DS2"
-                    },
-                    {
-                        label: "DS3"
-                    },
-                    {
-                        label: "DS4"
-                    },
-                    {
-                        label: "DS5"
-                    },
-                    {
-                        label: "DS6"
-                    }
-                ]
-            }
-        ],
+        key: 1000,
+        title: "Sensitive Data Distribution by Data Source",
+        width: 600,
+        height: 300,
         dataset: [
             {
-                seriesName: "Swift Code",
-                data: [
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "4"
-                    }
-                ]
+                name: "DS1",
+                swift_code: 3,
+                email: 2,
+                US_Bank_Acc_Num: 5,
+                Phone: 4,
+                SSN: 12,
+                US_Passport: 1,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "Email",
-                data: [
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "3"
-                    }
-                ]
+                name: "DS2",
+                swift_code: 3,
+                email: 2,
+                US_Bank_Acc_Num: 5,
+                Phone: 4,
+                SSN: 12,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "U.S Bank Acc. Num",
-                data: [
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    }
-                ]
+                name: "DS3",
+                swift_code: 4,
+                email: 3,
+                US_Bank_Acc_Num: 6,
+                Phone: 5,
+                SSN: 13,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "Phone",
-                data: [
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    }
-                ]
+                name: "DS4",
+                swift_code: 3,
+                email: 3,
+                US_Bank_Acc_Num: 6,
+                Phone: 5,
+                SSN: 12,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "SSN",
-                data: [
-                    {
-                        value: "13"
-                    },
-                    {
-                        value: "13"
-                    },
-                    {
-                        value: "15"
-                    },
-                    {
-                        value: "14"
-                    },
-                    {
-                        value: "11"
-                    },
-                    {
-                        "value": "13"
-                    }
-                ]
+                name: "DS5",
+                swift_code: 2,
+                email: 2,
+                US_Bank_Acc_Num: 4,
+                Phone: 4,
+                SSN: 9,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "US Passport",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    }
-                ]
-            },
-            {
-                seriesName: "ABA Routing",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    }
-                ]
-            },
-            {
-                seriesName: "DOB",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    }
-                ]
-            },
-            {
-                seriesName: "Credit Card",
-                data: [
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "3"
-                    }
-                ]
+                name: "DS6",
+                swift_code: 4,
+                email: 3,
+                US_Bank_Acc_Num: 5,
+                Phone: 5,
+                SSN: 10,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             }
-        ]
+        ],
     },
     tinyGraphs: [
         {
@@ -303,7 +149,7 @@ module.exports = {
                     },
                     {
                         label: "US Passport",
-                        value:"4"
+                        value: "4"
                     },
                     {
                         label: "ABA Routing",
@@ -321,7 +167,8 @@ module.exports = {
             },
             type: "doughnut2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 1
         },
         {
             info: {
@@ -379,7 +226,8 @@ module.exports = {
             },
             type: "doughnut2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 2
         },
         {
             info: {
@@ -412,7 +260,8 @@ module.exports = {
             },
             type: "bar2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 3
         },
         {
             info: {
@@ -445,7 +294,8 @@ module.exports = {
             },
             type: "bar2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 4
         },
         {
             info: {
@@ -498,7 +348,8 @@ module.exports = {
             },
             type: "scrollbar2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 5
         },
         {
             info: {
@@ -583,7 +434,8 @@ module.exports = {
             },
             type: "stackedbar2d",
             width: 100,
-            height: 100
+            height: 100,
+            id: 6
         }
     ]
 }
