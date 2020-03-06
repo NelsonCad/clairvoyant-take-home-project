@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/NelsonCad/clairvoyant-take-home-project/issues"
   },
-  "homepage": ".",
+  "homepage": "https://github.com/NelsonCad/clairvoyant-take-home-project",
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.9.1",
