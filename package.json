@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/NelsonCad/clairvoyant-take-home-project/issues"
   },
-  "homepage": "https://peaceful-everglades-15759.herokuapp.com/",
+  "homepage": ".",
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.9.1",
