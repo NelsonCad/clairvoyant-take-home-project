@@ -16,16 +16,14 @@ import Notifs from './../components/Notifs';
 import DonutChart from './../components/DonutChart';
 import Barchart from './../components/BarChart';
 import StackedChart from './../components/StackedChart';
-// import API from "../utils/API";
 
 const { Content } = Layout;
-const piecharts = ChartData.tinyGraphs.DonutCharts;
-const barCharts = ChartData.tinyGraphs.BarCharts;
-const stackedCharts = ChartData.tinyGraphs.StackedBars;
+let piecharts = ChartData.tinyGraphs.DonutCharts;
+let barCharts = ChartData.tinyGraphs.BarCharts;
+let stackedCharts = ChartData.tinyGraphs.StackedBars;
+
 
 function Dashboard() {
-
-
 
     return (
         <div>
@@ -45,7 +43,7 @@ function Dashboard() {
                             />
                         </Col>
 
-                        <Col span={8}>
+                        <Col span={8} className="notifications">
                             <Infocell title="Notifications">
                                 <Notifs />
                             </Infocell>

@@ -16,12 +16,12 @@ function Overview() {
         <div className="site-card-wrapper">
             <Row gutter={[16, 16]} justify="center">
                 <Col span={4}>
-                    <Card title={issuesResolved.title} bordered={false}>
+                    <Card title={issuesResolved.title} bordered={false} className="stats">
                         {issuesResolved.amount}
                     </Card>
                 </Col>
                 <Col span={10}>
-                    <Card title={inspectionCoverage.title} bordered={false}>
+                    <Card title={inspectionCoverage.title} bordered={false} className="stats">
 
                         <div className="inline coverage">
                             <p>{inspectionCoverage.databases.current}/{inspectionCoverage.databases.total}</p>
@@ -41,7 +41,7 @@ function Overview() {
                     </Card>
                 </Col>
                 <Col span={9}>
-                    <Card title={sensitiveDataLocations.title} bordered={false}>
+                    <Card title={sensitiveDataLocations.title} bordered={false} className="stats">
                         <div className="inline location">
                             <p>{sensitiveDataLocations.dataSources}</p>
                             <p>Sources</p>

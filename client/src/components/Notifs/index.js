@@ -7,8 +7,6 @@ const Notes = ChartsData.notifications;
 function Notifs() {
 
     const [current, setCurrent] = useState("all");
-    // const [term, setTerm] = useState("all");
-    // const [list, setList] = useState([]);
 
     function handleClick(e) {
         setCurrent(e.key);
@@ -34,22 +32,25 @@ function Notifs() {
                 </Menu.Item>
             </Menu>
 
-            {current === "all" ? (
-                Notes.map(note => (
-                    <Card key={note.id}>
-                        <h3>{note.title}</h3>
-                        <p>{note.time}</p>
-                        <p>{note.description}</p>
-                    </Card>
-                )))
-                : (
-                    Notes.filter(note => note.tag === current).map(note => (
+            <Card className="holder">
+
+                {current === "all" ? (
+                    Notes.map(note => (
                         <Card key={note.id}>
                             <h3>{note.title}</h3>
                             <p>{note.time}</p>
                             <p>{note.description}</p>
                         </Card>
-                    )))}
+                    )))
+                    : (
+                        Notes.filter(note => note.tag === current).map(note => (
+                            <Card key={note.id}>
+                                <h3>{note.title}</h3>
+                                <p>{note.time}</p>
+                                <p>{note.description}</p>
+                            </Card>
+                        )))}
+            </Card>
         </div>
     )
 }

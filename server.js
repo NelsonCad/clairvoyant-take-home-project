@@ -3,7 +3,7 @@ const logger = require("morgan");
 const router =require("express").Router();
 const bodyParser = require("body-parser");
 const path = require("path");
-const chartInfo = require("./infoDataTonic");
+const chartInfo = require("./dataTonic");
 
 const app = express();
 

@@ -9,11 +9,11 @@ function Navbar() {
 
     function handleClick(e) {
 
-        setCurrent(e);
+        setCurrent(e.key);
     };
 
     return (
-        <Menu onClick={() => handleClick()} selectedKeys={current} mode="horizontal">
+        <Menu onClick={handleClick} selectedKeys={current} mode="horizontal">
 
             <Menu.Item key="logo" className="logo">
                 <Link to="/" rel="DataTonic-logo">
