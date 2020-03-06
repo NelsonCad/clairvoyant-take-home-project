@@ -1,5 +1,4 @@
 const express = require("express");
-const router = require("express").Router();
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -21,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get(function (req, res) {
-    res.sendFile('*', path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile('*', path.resolve(__dirname, "client", "public", "index.html"));
   });
 }
 
