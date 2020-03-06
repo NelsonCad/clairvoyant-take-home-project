@@ -14,7 +14,7 @@ const sensitiveDataLocations = ChartData.overview.sensitiveDataLocations;
 function Overview() {
     return (
         <div className="site-card-wrapper">
-            <Row gutter={16} justify="center">
+            <Row gutter={[16, 16]} justify="center">
                 <Col span={4}>
                     <Card title={issuesResolved.title} bordered={false}>
                         {issuesResolved.amount}

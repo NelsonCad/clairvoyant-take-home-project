@@ -110,194 +110,176 @@ module.exports = {
             }
         ],
     },
-    tinyGraphs: [
-        {
-            info: {
-                chart: {
-                    caption: "Sensitive Info by Type",
-                    subcaption: "(Count of Data Sources)",
-                    aligncaptionwithcanvas: "0",
-                    captionpadding: "0",
-                    decimals: "0",
-                    centerlabel: "<b>$label</b>: <b>$value</b>",
-                    theme: "fusion"
-                },
+    tinyGraphs: {
+        DonutCharts: [
+            {
+                title: "Sensitive Info by Type",
                 data: [
                     {
-                        label: "IBAN",
-                        value: "2"
+                        name: "IBAN",
+                        value: 2
                     },
                     {
-                        label: "Swift Code",
-                        value: "4"
+                        name: "Swift Code",
+                        value: 4
                     },
                     {
-                        label: "Email",
-                        value: "8"
+                        name: "Email",
+                        value: 8
                     },
                     {
-                        label: "US Bank Acc. Num.",
-                        value: "4"
+                        name: "US Bank Acc. Num.",
+                        value: 4
                     },
                     {
-                        label: "Phone",
-                        value: "5"
+                        name: "Phone",
+                        value: 5
                     },
                     {
-                        label: "SSN",
-                        value: "2"
+                        name: "SSN",
+                        value: 2
                     },
                     {
-                        label: "US Passport",
-                        value: "4"
+                        name: "US Passport",
+                        value: 4
                     },
                     {
-                        label: "ABA Routing",
-                        value: "5"
+                        name: "ABA Routing",
+                        value: 5
                     },
                     {
-                        label: "DOB",
-                        value: "4"
+                        name: "DOB",
+                        value: 4
                     },
                     {
-                        label: "Credit Card",
-                        value: "3"
+                        name: "Credit Card",
+                        value: 3
                     }
-                ]
+                ],
+                width: 800,
+                height: 600,
+                key: 1
             },
-            type: "doughnut2d",
-            width: 100,
-            height: 100,
-            id: 1
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Sensitive Info by Category",
-                    subcaption: "(Count of Data Sources)",
-                    aligncaptionwithcanvas: "0",
-                    captionpadding: "0",
-                    decimals: "0",
-                    centerlabel: "<b>$label</b>: <b>$value</b>",
-                    theme: "fusion"
-                },
+            {
                 data: [
                     {
-                        label: "PII",
-                        value: "9"
+                        name: "PII",
+                        value: 9
                     },
                     {
-                        label: "HIPAA",
-                        value: "4"
+                        name: "HIPAA",
+                        value: 4
                     },
                     {
-                        label: "FERPA",
-                        value: "8"
+                        name: "FERPA",
+                        value: 8
                     },
                     {
-                        label: "Class3",
-                        value: "4"
+                        name: "Class3",
+                        value: 4
                     },
                     {
-                        label: "Class4",
-                        value: "5"
+                        name: "Class4",
+                        value: 5
                     },
                     {
-                        label: "Class5",
-                        value: "2"
+                        name: "Class5",
+                        value: 2
                     },
                     {
-                        label: "Class6",
-                        value: "4"
+                        name: "Class6",
+                        value: 4
                     },
                     {
-                        label: "Class7",
-                        value: "5"
+                        name: "Class7",
+                        value: 5
                     },
                     {
-                        label: "PCI",
-                        value: "4"
+                        name: "PCI",
+                        value: 4
                     },
                     {
-                        label: "IIYWASWIWTBOTSA4AATWUOTDTMIHCIMFH",
-                        value: "3"
+                        name: "IIYWASWIWTBOTSA4AATWUOTDTMIHCIMFH",
+                        value: 3
                     }
-                ]
-            },
-            type: "doughnut2d",
-            width: 100,
-            height: 100,
-            id: 2
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Inspection Coverage",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(inspection coverage (%)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b>% of <b>$label</b> inspected",
-                    theme: "fusion"
+                ],
+                title: "Sensitive Info by Category",
+                width: 100,
+                height: 100,
+                key: 2
+            }
+        ],
+        BarCharts: [
+            {
+                info: {
+                    chart: {
+                        caption: "Inspection Coverage",
+                        subcaption: "by Data Sources",
+                        yaxisname: "(inspection coverage (%)",
+                        aligncaptionwithcanvas: "0",
+                        plottooltext: "<b>$dataValue</b>% of <b>$label</b> inspected",
+                        theme: "fusion"
+                    },
+                    data: [
+                        {
+                            label: "DS1",
+                            value: "75"
+                        },
+                        {
+                            label: "DS2",
+                            value: "43"
+                        },
+                        {
+                            label: "DS3",
+                            value: "94"
+                        },
+                        {
+                            label: "DS4",
+                            value: "38"
+                        }
+                    ]
                 },
-                data: [
-                    {
-                        label: "DS1",
-                        value: "75"
-                    },
-                    {
-                        label: "DS2",
-                        value: "43"
-                    },
-                    {
-                        label: "DS3",
-                        value: "94"
-                    },
-                    {
-                        label: "DS4",
-                        value: "38"
-                    }
-                ]
+                title: "Inspection Coverage",
+                width: 100,
+                height: 100,
+                id: 3
             },
-            type: "bar2d",
-            width: 100,
-            height: 100,
-            id: 3
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Count of Sensitive Info Type",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(Count of unique Sensitive Info Types)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
-                    theme: "fusion"
+            {
+                info: {
+                    chart: {
+                        caption: "Count of Sensitive Info Type",
+                        subcaption: "by Data Sources",
+                        yaxisname: "(Count of unique Sensitive Info Types)",
+                        aligncaptionwithcanvas: "0",
+                        plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
+                        theme: "fusion"
+                    },
+                    data: [
+                        {
+                            label: "DS1",
+                            value: "22"
+                        },
+                        {
+                            label: "DS2",
+                            value: "14"
+                        },
+                        {
+                            label: "DS3",
+                            value: "28"
+                        },
+                        {
+                            label: "DS4",
+                            value: "12"
+                        }
+                    ]
                 },
-                data: [
-                    {
-                        label: "DS1",
-                        value: "22"
-                    },
-                    {
-                        label: "DS2",
-                        value: "14"
-                    },
-                    {
-                        label: "DS3",
-                        value: "28"
-                    },
-                    {
-                        label: "DS4",
-                        value: "12"
-                    }
-                ]
-            },
-            type: "bar2d",
-            width: 100,
-            height: 100,
-            id: 4
-        },
-        {
+                title: "Sensitive Info by Type",
+                width: 100,
+                height: 100,
+                id: 4
+            }
+        ],
+        sensitiveInfoCate: {
             info: {
                 chart: {
                     caption: "Count of Sensitive Info Category",
@@ -350,8 +332,10 @@ module.exports = {
             width: 100,
             height: 100,
             id: 5
-        },
-        {
+        }
+    },
+    stackedbBars: {
+        sensitiveDataRecordCount: {
             info: {
                 chart: {
                     caption: "Sensitive Data Record Count",
@@ -437,5 +421,5 @@ module.exports = {
             height: 100,
             id: 6
         }
-    ]
+    }
 }

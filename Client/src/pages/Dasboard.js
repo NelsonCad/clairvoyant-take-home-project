@@ -9,46 +9,25 @@ import {
     Row
 } from 'antd'
 import ChartData from './../components/infoDataTonic';
-// import API from "../utils/API";
+import Overview from './../components/Overview';
 import BigChart from './../components/BigChart';
-import Overview from './../components/Overview'
+import Infocell from './../components/Infocell';
+import DonutChart from './../components/DonutChart';
+// import API from "../utils/API";
 
 const { Content } = Layout;
+const piecharts = ChartData.tinyGraphs.DonutCharts;
+const barCharts = ChartData.tinyGraphs.BarCharts;
 
 function Dashboard() {
 
-    // const [call, setCall] = useState(false);
-    // const [totalInfo, setTotalInfo] = useState({});
-    // const [overviewInfo, setOverviewInfo] = useState({});
-    // const [distChartInfo, setDistChartInfo] = useState({});
-    // const [tinyGraphInfo, setTinyGraphInfo] = useState([]);
 
-    // useEffect(() => {
-
-    //     async function fetchInfo() {
-    //         let fetcher = await window.fetch("/api/info")
-    //         let result = await fetcher.json()
-    //         setTotalInfo(result)
-
-    //         setCall(false);
-    //         console.log(totalInfo)
-    //     };
-    //     fetchInfo();
-
-    //     .then(() => setOverviewInfo(totalInfo.overview))
-    //     .then(() => setDistChartInfo(totalInfo.dataDistChart))
-    //     .then(() => setTinyGraphInfo(totalInfo.tinyGraphs))
-
-    // }, [call]);
-
-    // let tinyGraphs = ChartData.tinyGraphs
 
     return (
         <div>
             <Layout>
-                
-                    <Overview />
-                
+
+                <Overview />
 
                 <Content>
                     <Row>
@@ -63,16 +42,25 @@ function Dashboard() {
                         </Col>
                     </Row>
 
-                    <Row>
-                        {/* {tinyGraphInfo.map(chartInfo => (
-                    <Infocell
-                        type={chartInfo.type}
-                        width={chartInfo.width}
-                        height={chartInfo.height}
-                        dataSource={chartInfo.info}
-                    />
-                    ))}; */
-                        }
+                    <Row gutter={[16, 16]} justify="center">
+                        {piecharts.map(donut => (
+                            <Col span={8} key={donut.key}>
+                                <Infocell title={donut.title}>
+                                    <DonutChart
+                                        key={donut.key}
+                                        data={donut.data}
+                                        width={donut.width}
+                                        height={donut.height}
+                                    />
+                                </Infocell>
+                            </Col>
+                        ))}
+
+                        <Col span={8}>
+                            <Infocell title={barCharts[0].title}>
+
+                            </Infocell>
+                        </Col>
 
                     </Row>
                 </Content>
