@@ -1,7 +1,9 @@
 const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
-let chartInfo = require("./infoDataTonic");
+const path = require("path");
+const chartInfo = require("./infoDataTonic");
+
 
 const app = express();
 
