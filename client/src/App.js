@@ -9,7 +9,6 @@ function App () {
     return (
         <Router>
             <Navbar />
-            <Route exact path="/" component={Dashboard} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/sources" component={Sources} />
         </Router>

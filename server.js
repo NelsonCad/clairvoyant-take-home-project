@@ -18,13 +18,12 @@ app.use(logger("dev"));
 // Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-
 }
 
 //Routes
 
 //API routes start with [siteName]:PORT
-app.get("/api/info", function (req, res) {
+app.get("/api", function (req, res) {
   return res.json(chartInfo)
 });
 //if no API routes are hit, send React app
