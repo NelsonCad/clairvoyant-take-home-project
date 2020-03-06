@@ -21,12 +21,12 @@ app.get("/api/info", function (req,res) {
 });
 //if no API routes are hit, send React app
 app.use(function (req,res) {
-  res.sendFile(path.join(__dirname, "../Client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 // Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("Client/build"));
+    app.use(express.static("client/build"));
   }
 
 app.listen(PORT, function() {
