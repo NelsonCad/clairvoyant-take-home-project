@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const chartInfo = require("./infoDataTonic");
 
-
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -21,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 
 }
 app.get(function (req, res) {
-  res.sendFile('*', path.resolve(__dirname, "client", "public", "index.html"));
+  res.sendFile('*', path.resolve(__dirname, "client", "build", "index.html"));
 });
 
 //Routes
