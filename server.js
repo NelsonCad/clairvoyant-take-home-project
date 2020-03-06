@@ -19,7 +19,7 @@ app.use(logger("dev"));
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
-  
+
 //Routes
 
 //API routes start with [siteName]:PORT
@@ -28,10 +28,8 @@ app.get("/api/info", function (req,res) {
 });
 //if no API routes are hit, send React app
 app.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
-
 
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
