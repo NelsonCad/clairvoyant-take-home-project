@@ -21,7 +21,7 @@ app.get("/api/info", function (req,res) {
 });
 //if no API routes are hit, send React app
 app.use(function (req,res) {
-  res.sendFile(path.join(_dirname, "../Client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../Client/build/index.html"));
 });
 
 // Serve up static assets (heroku)
