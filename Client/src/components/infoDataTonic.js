@@ -332,24 +332,28 @@ module.exports = {
     },
     notifications: [
         {
+            id: 2001,
             title: "Security Threat",
             description: "Door unlocked",
             tag: "critical",
             time: "30 min. ago"
         },
         {
+            id: 2002,
             title: "Warning",
             description: "Floor is wet",
             tag: "warn",
             time: "1 hour ago"
         },
         {
+            id: 2003,
             title: "Heads up",
             description: "Bill brought doughnuts for everyone",
             tag: "info",
             time: "10 min. ago"
         },
         {
+            id: 2004,
             title: "Heads up",
             description: "Funny Tie Day is tomorrow",
             tag: "info",

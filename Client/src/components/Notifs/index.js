@@ -36,7 +36,7 @@ function Notifs() {
 
             {current === "all" ? (
                 Notes.map(note => (
-                    <Card>
+                    <Card key={note.id}>
                         <h3>{note.title}</h3>
                         <p>{note.time}</p>
                         <p>{note.description}</p>
@@ -44,7 +44,7 @@ function Notifs() {
                 )))
                 : (
                     Notes.filter(note => note.tag === current).map(note => (
-                        <Card>
+                        <Card key={note.id}>
                             <h3>{note.title}</h3>
                             <p>{note.time}</p>
                             <p>{note.description}</p>
