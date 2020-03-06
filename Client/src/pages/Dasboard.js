@@ -9,9 +9,10 @@ import {
     Row
 } from 'antd'
 import ChartData from './../components/infoDataTonic';
+import Infocell from './../components/Infocell';
 import Overview from './../components/Overview';
 import BigChart from './../components/BigChart';
-import Infocell from './../components/Infocell';
+import Notifs from './../components/Notifs';
 import DonutChart from './../components/DonutChart';
 import Barchart from './../components/BarChart';
 import StackedChart from './../components/StackedChart';
@@ -33,7 +34,7 @@ function Dashboard() {
                 <Overview />
 
                 <Content>
-                    <Row>
+                    <Row gutter={[16, 16]} justify="center">
                         <Col span={16} >
                             <BigChart
                                 key={ChartData.dataDistChart.key}
@@ -43,11 +44,17 @@ function Dashboard() {
                                 data={ChartData.dataDistChart.dataset}
                             />
                         </Col>
+
+                        <Col span={8}>
+                            <Infocell title="Notifications">
+                                <Notifs />
+                            </Infocell>
+                        </Col>
                     </Row>
 
                     <Row gutter={[16, 16]} justify="center">
                         {piecharts.map(donut => (
-                            <Col span={8} key={donut.key}>
+                            <Col span={7} key={donut.key}>
                                 <Infocell title={donut.title}>
                                     <DonutChart
                                         key={donut.key}
@@ -58,7 +65,7 @@ function Dashboard() {
                         ))}
 
                         {barCharts.map(bars => (
-                            <Col span={8} key={bars.id}>
+                            <Col span={7} key={bars.id}>
                                 <Infocell title={bars.title}>
                                     <Barchart
                                         data={bars.data}
@@ -68,7 +75,7 @@ function Dashboard() {
                         ))}
 
                         {stackedCharts.map(stack => (
-                            <Col span={8} key={stack.id}>
+                            <Col span={7} key={stack.id}>
                                 <Infocell title={stack.title}>
                                     <StackedChart 
                                     data={stack.data}

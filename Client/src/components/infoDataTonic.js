@@ -329,5 +329,31 @@ module.exports = {
                 id: 6
             }
         ]
-    }
+    },
+    notifications: [
+        {
+            title: "Security Threat",
+            description: "Door unlocked",
+            tag: "critical",
+            time: "30 min. ago"
+        },
+        {
+            title: "Warning",
+            description: "Floor is wet",
+            tag: "warn",
+            time: "1 hour ago"
+        },
+        {
+            title: "Heads up",
+            description: "Bill brought doughnuts for everyone",
+            tag: "info",
+            time: "10 min. ago"
+        },
+        {
+            title: "Heads up",
+            description: "Funny Tie Day is tomorrow",
+            tag: "info",
+            time: "3 hours ago"
+        }
+    ]
 }

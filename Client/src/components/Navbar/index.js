@@ -2,17 +2,10 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import {
-    MailOutlined,
-    AppstoreOutlined,
-    SettingOutlined
-} from '@ant-design/icons';
-
-const { SubMenu } = Menu;
 
 function Navbar() {
 
-    const [current, setCurrent] = useState('mail');
+    const [current, setCurrent] = useState('dashboard');
 
     function handleClick(e) {
 
@@ -36,40 +29,26 @@ function Navbar() {
 
             <Menu.Item key="dashboard" >
                 <Link to="/dashboard" rel="dashboard" >
-                    <MailOutlined />
                     Dashboard
               </Link>
             </Menu.Item>
 
-            <Menu.Item key="app" >
+            <Menu.Item key="sources" >
                 <Link to="/sources" rel="sources">
-                    <AppstoreOutlined />
                     Sources
                     </Link>
             </Menu.Item>
 
-            <SubMenu
-                title={
-                    <span className="submenu-title-wrapper">
-                        <SettingOutlined />
-                        Navigation Three - Submenu
-            </span>
-                }
-            >
-                <Menu.ItemGroup title="Item 1">
-                    <Menu.Item key="setting:1">Option 1</Menu.Item>
-                    <Menu.Item key="setting:2">Option 2</Menu.Item>
-                </Menu.ItemGroup>
-                <Menu.ItemGroup title="Item 2">
-                    <Menu.Item key="setting:3">Option 3</Menu.Item>
-                    <Menu.Item key="setting:4">Option 4</Menu.Item>
-                </Menu.ItemGroup>
-            </SubMenu>
+            <Menu.Item key="Inspector" >
+                <Link to="/sources" rel="sources">
+                    Inspector
+                    </Link>
+            </Menu.Item>
 
-            <Menu.Item key="alipay">
-                <a href="/dashboard" rel="noopener noreferrer">
-                    Navigation Four - Link
-          </a>
+            <Menu.Item key="Ingestion" >
+                <Link to="/sources" rel="sources">
+                    Ingestion
+                    </Link>
             </Menu.Item>
 
         </Menu>
