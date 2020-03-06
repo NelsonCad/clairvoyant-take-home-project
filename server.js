@@ -1,4 +1,5 @@
 const express = require("express");
+const router = require("express").Router();
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -27,7 +28,7 @@ app.get("/api/info", function (req,res) {
   return res.json(chartInfo)
 });
 //if no API routes are hit, send React app
-app.use(function(req, res) {
+router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
