@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const router =require("express").Router();
 const bodyParser = require("body-parser");
 const path = require("path");
 const chartInfo = require("./infoDataTonic");
@@ -19,9 +20,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
 }
-app.get(function (req, res) {
-  res.sendFile('*', path.resolve(__dirname, "client", "build", "index.html"));
-});
 
 //Routes
 
@@ -30,7 +28,9 @@ app.get("/api/info", function (req, res) {
   return res.json(chartInfo)
 });
 //if no API routes are hit, send React app
-
+router.use(function (req, res) {
+  res.sendFile('*', path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
