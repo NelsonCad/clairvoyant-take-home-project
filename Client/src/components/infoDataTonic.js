@@ -156,8 +156,6 @@ module.exports = {
                         value: 3
                     }
                 ],
-                width: 800,
-                height: 600,
                 key: 1
             },
             {
@@ -204,135 +202,100 @@ module.exports = {
                     }
                 ],
                 title: "Sensitive Info by Category",
-                width: 100,
-                height: 100,
                 key: 2
             }
         ],
         BarCharts: [
             {
-                info: {
-                    chart: {
-                        caption: "Inspection Coverage",
-                        subcaption: "by Data Sources",
-                        yaxisname: "(inspection coverage (%)",
-                        aligncaptionwithcanvas: "0",
-                        plottooltext: "<b>$dataValue</b>% of <b>$label</b> inspected",
-                        theme: "fusion"
+                data: [
+                    {
+                        name: "DS1",
+                        value: "75"
                     },
-                    data: [
-                        {
-                            label: "DS1",
-                            value: "75"
-                        },
-                        {
-                            label: "DS2",
-                            value: "43"
-                        },
-                        {
-                            label: "DS3",
-                            value: "94"
-                        },
-                        {
-                            label: "DS4",
-                            value: "38"
-                        }
-                    ]
-                },
+                    {
+                        name: "DS2",
+                        value: "43"
+                    },
+                    {
+                        name: "DS3",
+                        value: "94"
+                    },
+                    {
+                        name: "DS4",
+                        value: "38"
+                    }
+                ],
                 title: "Inspection Coverage",
-                width: 100,
-                height: 100,
+                description: "(Inspection Coverage %)",
                 id: 3
             },
             {
-                info: {
-                    chart: {
-                        caption: "Count of Sensitive Info Type",
-                        subcaption: "by Data Sources",
-                        yaxisname: "(Count of unique Sensitive Info Types)",
-                        aligncaptionwithcanvas: "0",
-                        plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
-                        theme: "fusion"
-                    },
-                    data: [
-                        {
-                            label: "DS1",
-                            value: "22"
-                        },
-                        {
-                            label: "DS2",
-                            value: "14"
-                        },
-                        {
-                            label: "DS3",
-                            value: "28"
-                        },
-                        {
-                            label: "DS4",
-                            value: "12"
-                        }
-                    ]
-                },
-                title: "Sensitive Info by Type",
-                width: 100,
-                height: 100,
-                id: 4
-            }
-        ],
-        sensitiveInfoCate: {
-            info: {
-                chart: {
-                    caption: "Count of Sensitive Info Category",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(Count of unique Sensitive InfoType Categories)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
-                    theme: "fusion"
-                },
                 data: [
                     {
-                        label: "DS1",
+                        name: "DS1",
                         value: "22"
                     },
                     {
-                        label: "DS2",
+                        name: "DS2",
                         value: "14"
                     },
                     {
-                        label: "DS3",
+                        name: "DS3",
                         value: "28"
                     },
                     {
-                        label: "DS4",
+                        name: "DS4",
+                        value: "12"
+                    }
+                ],
+                title: "Sensitive Info by Type",
+                description: "(Count of Unique Sensitive Info Types)",
+                id: 4
+            },
+            {
+                data: [
+                    {
+                        name: "DS1",
+                        value: "22"
+                    },
+                    {
+                        name: "DS2",
+                        value: "14"
+                    },
+                    {
+                        name: "DS3",
+                        value: "28"
+                    },
+                    {
+                        name: "DS4",
                         value: "12"
                     },
                     {
-                        label: "DS5",
+                        name: "DS5",
                         value: "16"
                     },
                     {
-                        label: "DS6",
+                        name: "DS6",
                         value: "9"
                     },
                     {
-                        label: "DS7",
+                        name: "DS7",
                         value: "8"
                     },
                     {
-                        label: "DSLite",
+                        name: "DSLite",
                         value: "2"
                     },
                     {
-                        label: "DS1/2",
+                        name: "DS1/2",
                         value: "7"
                     }
-                ]
-            },
-            type: "scrollbar2d",
-            width: 100,
-            height: 100,
-            id: 5
-        }
+                ],
+                title: "Sensitive information by Category",
+                description: "(Count of unique sensitive InfoType Categories)",
+                id: 5
+            }
+        ],
     },
     stackedbBars: {
         sensitiveDataRecordCount: {

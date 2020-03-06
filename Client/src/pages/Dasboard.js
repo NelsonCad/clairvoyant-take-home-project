@@ -13,6 +13,7 @@ import Overview from './../components/Overview';
 import BigChart from './../components/BigChart';
 import Infocell from './../components/Infocell';
 import DonutChart from './../components/DonutChart';
+import Barchart from './../components/BarChart'
 // import API from "../utils/API";
 
 const { Content } = Layout;
@@ -49,18 +50,21 @@ function Dashboard() {
                                     <DonutChart
                                         key={donut.key}
                                         data={donut.data}
-                                        width={donut.width}
-                                        height={donut.height}
                                     />
                                 </Infocell>
                             </Col>
                         ))}
 
-                        <Col span={8}>
-                            <Infocell title={barCharts[0].title}>
+                        {barCharts.map(bars => (
+                            <Col span={8} key={bars.id}>
+                                <Infocell title={bars.title}>
+                                    <Barchart
+                                        data={bars.data}
+                                    />
+                                </Infocell>
+                            </Col>
+                        ))}
 
-                            </Infocell>
-                        </Col>
 
                     </Row>
                 </Content>
