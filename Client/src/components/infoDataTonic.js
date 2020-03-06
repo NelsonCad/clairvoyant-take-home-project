@@ -296,93 +296,38 @@ module.exports = {
                 id: 5
             }
         ],
-    },
-    stackedbBars: {
-        sensitiveDataRecordCount: {
-            info: {
-                chart: {
-                    caption: "Sensitive Data Record Count",
-                    subcaption: "(By DaTa SoUrCeS)",
-                    placevaluesinside: "1",
-                    showvalues: "0",
-                    theme: "fusion"
-                },
-                categories: [
+        StackedBars: [
+            {
+                data: [
                     {
-                        category: [
-                            {
-                                label: "DS1"
-                            },
-                            {
-                                label: "DS2"
-                            },
-                            {
-                                label: "DS3"
-                            },
-                            {
-                                label: "DS4"
-                            }
-                        ]
+                        name: "DS1",
+                        class1: 5000,
+                        class2: 20000,
+                        class3: 30000
+                    },
+                    {
+                        name: "DS2",
+                        class1: 5000,
+                        class2: 20000,
+                        class3: 30000
+                    },
+                    {
+                        name: "DS3",
+                        class1: 6000,
+                        class2: 20000,
+                        class3: 29000
+                    },
+                    {
+                        name: "DS4",
+                        class1: 10000,
+                        class2: 20000,
+                        class3: 25000
                     }
                 ],
-                dataset: [
-                    {
-                        seriesname: "Class 1",
-                        data: [
-                            {
-                                value: "5000"
-                            },
-                            {
-                                value: "5000"
-                            },
-                            {
-                                value: "6000"
-                            },
-                            {
-                                value: "10000"
-                            }
-                        ]
-                    },
-                    {
-                        seriesname: "Class 2",
-                        data: [
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            }
-                        ]
-                    },
-                    {
-                        seriesname: "Class 3",
-                        data: [
-                            {
-                                value: "30000"
-                            },
-                            {
-                                value: "30000"
-                            },
-                            {
-                                value: "29000"
-                            },
-                            {
-                                value: "20000"
-                            }
-                        ]
-                    }
-                ]
-            },
-            type: "stackedbar2d",
-            width: 100,
-            height: 100,
-            id: 6
-        }
+                title: "Sensitive Data Record Count",
+                description: "(Count-Records/Rows Containing Sensitive Info)",
+                id: 6
+            }
+        ]
     }
 }

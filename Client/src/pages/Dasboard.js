@@ -13,12 +13,14 @@ import Overview from './../components/Overview';
 import BigChart from './../components/BigChart';
 import Infocell from './../components/Infocell';
 import DonutChart from './../components/DonutChart';
-import Barchart from './../components/BarChart'
+import Barchart from './../components/BarChart';
+import StackedChart from './../components/StackedChart';
 // import API from "../utils/API";
 
 const { Content } = Layout;
 const piecharts = ChartData.tinyGraphs.DonutCharts;
 const barCharts = ChartData.tinyGraphs.BarCharts;
+const stackedCharts = ChartData.tinyGraphs.StackedBars;
 
 function Dashboard() {
 
@@ -65,6 +67,15 @@ function Dashboard() {
                             </Col>
                         ))}
 
+                        {stackedCharts.map(stack => (
+                            <Col span={8} key={stack.id}>
+                                <Infocell title={stack.title}>
+                                    <StackedChart 
+                                    data={stack.data}
+                                    />
+                                </Infocell>
+                            </Col>
+                        ))}
 
                     </Row>
                 </Content>

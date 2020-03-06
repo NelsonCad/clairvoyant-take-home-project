@@ -8,7 +8,6 @@ import {
     Tooltip, 
     Legend 
 } from 'recharts';
-// import "Infocell.css";
 import { Card } from 'antd';
 
 
