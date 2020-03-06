@@ -15,6 +15,11 @@ app.use(bodyParser.json());
 
 app.use(logger("dev"));
 
+// Serve up static assets (heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
+  
 //Routes
 
 //API routes start with [siteName]:PORT
@@ -26,10 +31,7 @@ app.use(function(req, res) {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
-// Serve up static assets (heroku)
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-  }
+
 
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
