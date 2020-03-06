@@ -1,21 +1,29 @@
 module.exports = {
     overview: {
-        resolvedIssues: 5,
+        issuesResolved: {
+            title: "security Issues Resolved",
+            amount: 5,
+        },
         inspectionCoverage: {
+            title: "Inspection Coverage",
             databases: {
+                title: "Databases",
                 current: 20,
                 total: 50
             },
             tables: {
+                title: "Tables",
                 current: 20,
                 total: 50
             },
             files: {
+                title: "Files",
                 current: 130,
                 total: 8000
             }
         },
         sensitiveDataLocations: {
+            title: "Sensitive Data Location",
             dataSources: 3,
             databases: 5,
             tables: 8,
@@ -23,567 +31,333 @@ module.exports = {
         }
     },
     dataDistChart: {
-        chart: {
-            caption: "Sensitive Data Distribution by Data Source",
-            showsum: "10",
-            plottooltext: "<b>$dataValue</b> records distributed via $seriesName in $label",
-            theme: "fusion",
-            drawcrossline: "5"
-        },
-        categories: [
-            {
-                category: [
-                    {
-                        label: "DS1"
-                    },
-                    {
-                        label: "DS2"
-                    },
-                    {
-                        label: "DS3"
-                    },
-                    {
-                        label: "DS4"
-                    },
-                    {
-                        label: "DS5"
-                    },
-                    {
-                        label: "DS6"
-                    }
-                ]
-            }
-        ],
+        key: 1000,
+        title: "Sensitive Data Distribution by Data Source",
+        width: 600,
+        height: 300,
         dataset: [
             {
-                seriesName: "Swift Code",
-                data: [
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "4"
-                    }
-                ]
+                name: "DS1",
+                swift_code: 3,
+                email: 2,
+                US_Bank_Acc_Num: 5,
+                Phone: 4,
+                SSN: 12,
+                US_Passport: 1,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "Email",
-                data: [
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "3"
-                    }
-                ]
+                name: "DS2",
+                swift_code: 3,
+                email: 2,
+                US_Bank_Acc_Num: 5,
+                Phone: 4,
+                SSN: 12,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "U.S Bank Acc. Num",
-                data: [
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    }
-                ]
+                name: "DS3",
+                swift_code: 4,
+                email: 3,
+                US_Bank_Acc_Num: 6,
+                Phone: 5,
+                SSN: 13,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "Phone",
-                data: [
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "6"
-                    },
-                    {
-                        value: "5"
-                    },
-                    {
-                        value: "6"
-                    }
-                ]
+                name: "DS4",
+                swift_code: 3,
+                email: 3,
+                US_Bank_Acc_Num: 6,
+                Phone: 5,
+                SSN: 12,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "SSN",
-                data: [
-                    {
-                        value: "13"
-                    },
-                    {
-                        value: "13"
-                    },
-                    {
-                        value: "15"
-                    },
-                    {
-                        value: "14"
-                    },
-                    {
-                        value: "11"
-                    },
-                    {
-                        "value": "13"
-                    }
-                ]
+                name: "DS5",
+                swift_code: 2,
+                email: 2,
+                US_Bank_Acc_Num: 4,
+                Phone: 4,
+                SSN: 9,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             },
             {
-                seriesName: "US Passport",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    },
-                    {
-                        value: "2"
-                    }
-                ]
-            },
-            {
-                seriesName: "ABA Routing",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    }
-                ]
-            },
-            {
-                seriesName: "DOB",
-                data: [
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "1"
-                    }
-                ]
-            },
-            {
-                seriesName: "Credit Card",
-                data: [
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "3"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "4"
-                    },
-                    {
-                        value: "1"
-                    },
-                    {
-                        value: "3"
-                    }
-                ]
+                name: "DS6",
+                swift_code: 4,
+                email: 3,
+                US_Bank_Acc_Num: 5,
+                Phone: 5,
+                SSN: 10,
+                US_Passport: 2,
+                ABA_Routing: 2,
+                DOB: 2,
+                Credit_Card: 3
             }
-        ]
+        ],
     },
-    tinyGraphs: [
-        {
-            info: {
-                chart: {
-                    caption: "Sensitive Info by Type",
-                    subcaption: "(Count of Data Sources)",
-                    aligncaptionwithcanvas: "0",
-                    captionpadding: "0",
-                    decimals: "0",
-                    centerlabel: "<b>$label</b>: <b>$value</b>",
-                    theme: "fusion"
-                },
+    tinyGraphs: {
+        DonutCharts: [
+            {
+                title: "Sensitive Info by Type",
                 data: [
                     {
-                        label: "IBAN",
-                        value: "2"
+                        name: "IBAN",
+                        value: 2
                     },
                     {
-                        label: "Swift Code",
-                        value: "4"
+                        name: "Swift Code",
+                        value: 4
                     },
                     {
-                        label: "Email",
-                        value: "8"
+                        name: "Email",
+                        value: 8
                     },
                     {
-                        label: "US Bank Acc. Num.",
-                        value: "4"
+                        name: "US Bank Acc. Num.",
+                        value: 4
                     },
                     {
-                        label: "Phone",
-                        value: "5"
+                        name: "Phone",
+                        value: 5
                     },
                     {
-                        label: "SSN",
-                        value: "2"
+                        name: "SSN",
+                        value: 2
                     },
                     {
-                        label: "US Passport",
-                        value:"4"
+                        name: "US Passport",
+                        value: 4
                     },
                     {
-                        label: "ABA Routing",
-                        value: "5"
+                        name: "ABA Routing",
+                        value: 5
                     },
                     {
-                        label: "DOB",
-                        value: "4"
+                        name: "DOB",
+                        value: 4
                     },
                     {
-                        label: "Credit Card",
-                        value: "3"
+                        name: "Credit Card",
+                        value: 3
                     }
-                ]
+                ],
+                key: 1
             },
-            type: "doughnut2d",
-            width: 100,
-            height: 100
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Sensitive Info by Category",
-                    subcaption: "(Count of Data Sources)",
-                    aligncaptionwithcanvas: "0",
-                    captionpadding: "0",
-                    decimals: "0",
-                    centerlabel: "<b>$label</b>: <b>$value</b>",
-                    theme: "fusion"
-                },
+            {
                 data: [
                     {
-                        label: "PII",
-                        value: "9"
+                        name: "PII",
+                        value: 9
                     },
                     {
-                        label: "HIPAA",
-                        value: "4"
+                        name: "HIPAA",
+                        value: 4
                     },
                     {
-                        label: "FERPA",
-                        value: "8"
+                        name: "FERPA",
+                        value: 8
                     },
                     {
-                        label: "Class3",
-                        value: "4"
+                        name: "Class3",
+                        value: 4
                     },
                     {
-                        label: "Class4",
-                        value: "5"
+                        name: "Class4",
+                        value: 5
                     },
                     {
-                        label: "Class5",
-                        value: "2"
+                        name: "Class5",
+                        value: 2
                     },
                     {
-                        label: "Class6",
-                        value: "4"
+                        name: "Class6",
+                        value: 4
                     },
                     {
-                        label: "Class7",
-                        value: "5"
+                        name: "Class7",
+                        value: 5
                     },
                     {
-                        label: "PCI",
-                        value: "4"
+                        name: "PCI",
+                        value: 4
                     },
                     {
-                        label: "IIYWASWIWTBOTSA4AATWUOTDTMIHCIMFH",
-                        value: "3"
+                        name: "IIYWASWIWTBOTSA4AATWUOTDTMIHCIMFH",
+                        value: 3
                     }
-                ]
-            },
-            type: "doughnut2d",
-            width: 100,
-            height: 100
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Inspection Coverage",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(inspection coverage (%)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b>% of <b>$label</b> inspected",
-                    theme: "fusion"
-                },
+                ],
+                title: "Sensitive Info by Category",
+                key: 2
+            }
+        ],
+        BarCharts: [
+            {
                 data: [
                     {
-                        label: "DS1",
+                        name: "DS1",
                         value: "75"
                     },
                     {
-                        label: "DS2",
+                        name: "DS2",
                         value: "43"
                     },
                     {
-                        label: "DS3",
+                        name: "DS3",
                         value: "94"
                     },
                     {
-                        label: "DS4",
+                        name: "DS4",
                         value: "38"
                     }
-                ]
+                ],
+                title: "Inspection Coverage",
+                description: "(Inspection Coverage %)",
+                id: 3
             },
-            type: "bar2d",
-            width: 100,
-            height: 100
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Count of Sensitive Info Type",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(Count of unique Sensitive Info Types)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
-                    theme: "fusion"
-                },
+            {
                 data: [
                     {
-                        label: "DS1",
+                        name: "DS1",
                         value: "22"
                     },
                     {
-                        label: "DS2",
+                        name: "DS2",
                         value: "14"
                     },
                     {
-                        label: "DS3",
+                        name: "DS3",
                         value: "28"
                     },
                     {
-                        label: "DS4",
+                        name: "DS4",
                         value: "12"
                     }
-                ]
+                ],
+                title: "Sensitive Info by Type",
+                description: "(Count of Unique Sensitive Info Types)",
+                id: 4
             },
-            type: "bar2d",
-            width: 100,
-            height: 100
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Count of Sensitive Info Category",
-                    subcaption: "by Data Sources",
-                    yaxisname: "(Count of unique Sensitive InfoType Categories)",
-                    aligncaptionwithcanvas: "0",
-                    plottooltext: "<b>$dataValue</b> unique data typse within <b>$label</b>",
-                    theme: "fusion"
-                },
+            {
                 data: [
                     {
-                        label: "DS1",
+                        name: "DS1",
                         value: "22"
                     },
                     {
-                        label: "DS2",
+                        name: "DS2",
                         value: "14"
                     },
                     {
-                        label: "DS3",
+                        name: "DS3",
                         value: "28"
                     },
                     {
-                        label: "DS4",
+                        name: "DS4",
                         value: "12"
                     },
                     {
-                        label: "DS5",
+                        name: "DS5",
                         value: "16"
                     },
                     {
-                        label: "DS6",
+                        name: "DS6",
                         value: "9"
                     },
                     {
-                        label: "DS7",
+                        name: "DS7",
                         value: "8"
                     },
                     {
-                        label: "DSLite",
+                        name: "DSLite",
                         value: "2"
                     },
                     {
-                        label: "DS1/2",
+                        name: "DS1/2",
                         value: "7"
                     }
-                ]
-            },
-            type: "scrollbar2d",
-            width: 100,
-            height: 100
-        },
-        {
-            info: {
-                chart: {
-                    caption: "Sensitive Data Record Count",
-                    subcaption: "(By DaTa SoUrCeS)",
-                    placevaluesinside: "1",
-                    showvalues: "0",
-                    theme: "fusion"
-                },
-                categories: [
+                ],
+                title: "Sensitive information by Category",
+                description: "(Count of unique sensitive InfoType Categories)",
+                id: 5
+            }
+        ],
+        StackedBars: [
+            {
+                data: [
                     {
-                        category: [
-                            {
-                                label: "DS1"
-                            },
-                            {
-                                label: "DS2"
-                            },
-                            {
-                                label: "DS3"
-                            },
-                            {
-                                label: "DS4"
-                            }
-                        ]
+                        name: "DS1",
+                        class1: 5000,
+                        class2: 20000,
+                        class3: 30000
+                    },
+                    {
+                        name: "DS2",
+                        class1: 5000,
+                        class2: 20000,
+                        class3: 30000
+                    },
+                    {
+                        name: "DS3",
+                        class1: 6000,
+                        class2: 20000,
+                        class3: 29000
+                    },
+                    {
+                        name: "DS4",
+                        class1: 10000,
+                        class2: 20000,
+                        class3: 25000
                     }
                 ],
-                dataset: [
-                    {
-                        seriesname: "Class 1",
-                        data: [
-                            {
-                                value: "5000"
-                            },
-                            {
-                                value: "5000"
-                            },
-                            {
-                                value: "6000"
-                            },
-                            {
-                                value: "10000"
-                            }
-                        ]
-                    },
-                    {
-                        seriesname: "Class 2",
-                        data: [
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            },
-                            {
-                                value: "20000"
-                            }
-                        ]
-                    },
-                    {
-                        seriesname: "Class 3",
-                        data: [
-                            {
-                                value: "30000"
-                            },
-                            {
-                                value: "30000"
-                            },
-                            {
-                                value: "29000"
-                            },
-                            {
-                                value: "20000"
-                            }
-                        ]
-                    }
-                ]
-            },
-            type: "stackedbar2d",
-            width: 100,
-            height: 100
+                title: "Sensitive Data Record Count",
+                description: "(Count-Records/Rows Containing Sensitive Info)",
+                id: 6
+            }
+        ]
+    },
+    notifications: [
+        {
+            id: 2001,
+            title: "Security Threat",
+            description: "Door unlocked",
+            tag: "critical",
+            time: "30 min. ago"
+        },
+        {
+            id: 2002,
+            title: "Warning",
+            description: "Floor is wet",
+            tag: "warn",
+            time: "1 hour ago"
+        },
+        {
+            id: 2003,
+            title: "Heads up",
+            description: "Bill brought doughnuts for everyone",
+            tag: "info",
+            time: "10 min. ago"
+        },
+        {
+            id: 2004,
+            title: "Heads up",
+            description: "Funny Tie Day is tomorrow",
+            tag: "info",
+            time: "3 hours ago"
         }
     ]
 }
