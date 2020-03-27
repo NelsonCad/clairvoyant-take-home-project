@@ -1,14 +1,14 @@
 import React, {
-    // useState, 
-    // useEffect 
+    useState,
+    useEffect
 } from 'react';
 import './Dashboard.css';
 import {
     Layout,
     Col,
     Row
-} from 'antd'
-import ChartData from './../components/infoDataTonic';
+} from 'antd';
+import axios from 'axios';
 import Infocell from './../components/Infocell';
 import Overview from './../components/Overview';
 import BigChart from './../components/BigChart';
@@ -18,12 +18,28 @@ import Barchart from './../components/BarChart';
 import StackedChart from './../components/StackedChart';
 
 const { Content } = Layout;
-let piecharts = ChartData.tinyGraphs.DonutCharts;
-let barCharts = ChartData.tinyGraphs.BarCharts;
-let stackedCharts = ChartData.tinyGraphs.StackedBars;
-
 
 function Dashboard() {
+
+    const [chartData,setChartData] = useState({});
+
+    const [pies, setPies] = useState([]);
+    const [bars, setBars] = useState([]);
+    const [stacks, setStacks] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const result = await axios(
+                '/api',
+            );
+    
+            setChartData(result.data.dataDistChart)
+            setPies(result.data.tinyGraphs.DonutCharts);
+            setBars(result.data.tinyGraphs.BarCharts);
+            setStacks(result.data.tinyGraphs.StackedBars)
+        };
+        getData();
+    },[]);
 
     return (
         <div>
@@ -35,11 +51,11 @@ function Dashboard() {
                     <Row gutter={[16, 16]} justify="center">
                         <Col span={16} >
                             <BigChart
-                                key={ChartData.dataDistChart.key}
-                                title={ChartData.dataDistChart.title}
-                                width={ChartData.dataDistChart.width}
-                                height={ChartData.dataDistChart.height}
-                                data={ChartData.dataDistChart.dataset}
+                                key={chartData.key}
+                                title={chartData.title}
+                                width={chartData.width}
+                                height={chartData.height}
+                                data={chartData.dataset}
                             />
                         </Col>
 
@@ -51,7 +67,7 @@ function Dashboard() {
                     </Row>
 
                     <Row gutter={[16, 16]} justify="center">
-                        {piecharts.map(donut => (
+                        {pies.map(donut => (
                             <Col span={7} key={donut.key}>
                                 <Infocell title={donut.title}>
                                     <DonutChart
@@ -62,7 +78,7 @@ function Dashboard() {
                             </Col>
                         ))}
 
-                        {barCharts.map(bars => (
+                        {bars.map(bars => (
                             <Col span={7} key={bars.id}>
                                 <Infocell title={bars.title}>
                                     <Barchart
@@ -72,11 +88,11 @@ function Dashboard() {
                             </Col>
                         ))}
 
-                        {stackedCharts.map(stack => (
+                        {stacks.map(stack => (
                             <Col span={7} key={stack.id}>
                                 <Infocell title={stack.title}>
-                                    <StackedChart 
-                                    data={stack.data}
+                                    <StackedChart
+                                        data={stack.data}
                                     />
                                 </Infocell>
                             </Col>
