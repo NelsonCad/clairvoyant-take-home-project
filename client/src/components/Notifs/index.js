@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, Card } from 'antd';
-import ChartsData from "./../infoDataTonic";
-
-const Notes = ChartsData.notifications;
+import axios from 'axios';
+import './Notifs.css'
 
 function Notifs() {
 
     const [current, setCurrent] = useState("all");
+    const [notes, setNotes] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const result = await axios(
+                '/api',
+            );
+            setNotes(result.data.notifications);
+        };
+        getData();
+    },[]);
 
     function handleClick(e) {
         setCurrent(e.key);
@@ -35,7 +45,7 @@ function Notifs() {
             <Card className="holder">
 
                 {current === "all" ? (
-                    Notes.map(note => (
+                    notes.map(note => (
                         <Card key={note.id}>
                             <h3>{note.title}</h3>
                             <p>{note.time}</p>
@@ -43,7 +53,7 @@ function Notifs() {
                         </Card>
                     )))
                     : (
-                        Notes.filter(note => note.tag === current).map(note => (
+                        notes.filter(note => note.tag === current).map(note => (
                             <Card key={note.id}>
                                 <h3>{note.title}</h3>
                                 <p>{note.time}</p>

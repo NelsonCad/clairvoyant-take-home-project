@@ -49,7 +49,7 @@ function Dashboard() {
 
                 <Content>
                     <Row gutter={[16, 16]} justify="center">
-                        <Col span={16} >
+                        <Col span={15} >
                             <BigChart
                                 key={chartData.key}
                                 title={chartData.title}
@@ -59,17 +59,15 @@ function Dashboard() {
                             />
                         </Col>
 
-                        <Col span={8} className="notifications">
-                            <Infocell title="Notifications">
+                        <Col span={8} className="notifications">               
                                 <Notifs />
-                            </Infocell>
                         </Col>
                     </Row>
 
                     <Row gutter={[16, 16]} justify="center">
                         {pies.map(donut => (
-                            <Col span={7} key={donut.key}>
-                                <Infocell title={donut.title}>
+                            <Col span={7} key={donut.key} >
+                                <Infocell title={donut.title} className="tinyGraph">
                                     <DonutChart
                                         key={donut.key}
                                         data={donut.data}
@@ -79,8 +77,8 @@ function Dashboard() {
                         ))}
 
                         {bars.map(bars => (
-                            <Col span={7} key={bars.id}>
-                                <Infocell title={bars.title}>
+                            <Col span={7} key={bars.id} >
+                                <Infocell title={bars.title} className="tinyGraph">
                                     <Barchart
                                         data={bars.data}
                                     />
@@ -89,8 +87,8 @@ function Dashboard() {
                         ))}
 
                         {stacks.map(stack => (
-                            <Col span={7} key={stack.id}>
-                                <Infocell title={stack.title}>
+                            <Col span={7} key={stack.id} >
+                                <Infocell title={stack.title} className="tinyGraph">
                                     <StackedChart
                                         data={stack.data}
                                     />

@@ -33,7 +33,7 @@
     "dataDistChart": {
         "key": 1000,
         "title": "Sensitive Data Distribution by Data Source",
-        "width": 600,
+        "width": 800,
         "height": 300,
         "dataset": [
             {
@@ -358,6 +358,27 @@
             "description": "Funny Tie Day is tomorrow",
             "tag": "info",
             "time": "3 hours ago"
+        },
+        {
+            "id": 2005,
+            "title": "Watch out",
+            "description": "their are lions prowling outside the premise, be careful out there",
+            "tag": "warn",
+            "time": "17 hours ago"
+        },
+        {
+            "id": 2006,
+            "title": "COVID-19",
+            "description": "make sure to practice social distancing, 6 feet between each individual",
+            "tag": "critical",
+            "time": "1 week ago"
+        },
+        {
+            "id": 2007,
+            "title": "Toilet paper",
+            "description": "we are running short on toilet paper, if you use the bathroom, be sparse with it",
+            "tag": "warn",
+            "time": "2 days ago"
         }
     ]
 }

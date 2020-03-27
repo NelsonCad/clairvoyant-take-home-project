@@ -55,7 +55,7 @@ function DonutChart(props) {
       }
 
     return (
-        <PieChart width={400} height={400}>
+        <PieChart width={400} height={275}>
             <Pie
                 activeIndex={activeIndex}
                 activeShape={renderActiveShape}

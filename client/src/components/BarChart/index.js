@@ -11,7 +11,7 @@ import {
 function Barchart(props) {
 
     return (
-        <BarChart layout="vertical" width={250} height={250} data={props.data}
+        <BarChart layout="vertical" width={250} height={275} data={props.data}
             margin={{ top: 5, right: 5, left: 5, bottom: 5 }} >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number"/>

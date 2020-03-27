@@ -1,4 +1,4 @@
 .holder {
-    height: 200px;
-    overflow: scroll;
+    height: 360px;
+    overflow: auto;
 }
