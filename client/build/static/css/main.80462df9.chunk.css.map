@@ -1,1 +1,0 @@
-{"version":3,"sources":["Overview.css"],"names":[],"mappings":"AAAA,QACI,oBACJ,CAEA,UACI,SACJ,CAEA,UACI,SACJ","file":"main.80462df9.chunk.css","sourcesContent":[".inline {\r\n    display: inline-block;\r\n}\r\n\r\n.coverage {\r\n    width: 33%;\r\n}\r\n\r\n.location {\r\n    width: 24%;\r\n}"]}
